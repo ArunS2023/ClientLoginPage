@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+.popup-overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 0;
+}
+
+:root {
+  /* fonts */
+  --font-roboto: Roboto;
+
+  /* font sizes */
+  --font-size-xl: 20px;
+  --font-size-sm: 14px;
+  --font-size-5xl: 24px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-darkblue: #2b32b2;
+  --color-black: #000;
+  --color-green: #0d9e00;
+  --color-dimgray-100: #575757;
+  --color-dimgray-200: rgba(87, 87, 87, 0.6);
+
+  /* Paddings */
+  --padding-5xl: 24px;
+  --padding-50xl: 69px;
+
+  /* border radiuses */
+  --br-xl: 20px;
+}

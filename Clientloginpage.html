@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./Clientloginpage.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="client-login-page">
+      <div class="client-login-page1">
+        <div class="image-frame-parent">
+          <div class="image-frame">
+            <div class="image-frame-child"></div>
+            <div class="bottom-text">
+              <div class="lets-design-to-container">
+                <span class="lets">Let’s</span>
+                <span class="span3"> </span>
+                <span
+                  >Design to Change <span class="span4"> </span>The World!
+                </span>
+              </div>
+            </div>
+          </div>
+          <b class="client-login">Client Login</b>
+          <div class="username-box">
+            <img
+              class="usernamemail-icon"
+              alt=""
+              src="./public/usernamemail.svg"
+            />
+
+            <div class="emailusername">Email/Username</div>
+          </div>
+          <div class="password-box">
+            <div class="password-box-child"></div>
+            <div class="vector-wrapper">
+              <img class="vector-icon1" alt="" src="./public/vector1.svg" />
+            </div>
+            <div class="ellipse-parent">
+              <div class="frame-child"></div>
+              <div class="frame-child"></div>
+              <div class="frame-child"></div>
+              <div class="frame-child"></div>
+              <div class="frame-child"></div>
+              <div class="frame-child"></div>
+              <div class="frame-child"></div>
+              <div class="frame-child"></div>
+            </div>
+          </div>
+          <div class="login-button">
+            <div class="login">Login</div>
+          </div>
+          <div class="login-button1">
+            <div class="login">Admin Login</div>
+          </div>
+          <div class="forgot-usernamepassword">
+            <div class="forgot-usernamepassword1">
+              <span class="forgot">Forgot </span>
+              <span>Username/Password?</span>
+            </div>
+          </div>
+          <div class="forgot-usernamepassword2"></div>
+          <img
+            class="vector-icon2"
+            alt=""
+            src="./public/vector2.svg"
+            id="vectorIcon1"
+          />
+
+          <div class="register-account-icon">
+            <div></div>
+          </div>
+          <div class="register-account-icon1">
+            <img
+              class="register-account-icon-child"
+              alt=""
+              src="./public/group-2.svg"
+            />
+
+            <div class="register-for-new">Register for New Account</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contactHelpContainer" class="popup-overlay" style="display: none">
+      <div class="contacthelp">
+        <div class="contact-us">Contact Us / Help</div>
+        <div class="call-us-container">
+          <p class="chat-with-our-live-agent-cli">
+            <span class="call-us">Call us</span>
+            <span class="span"> : </span>
+            <span class="span1">1800 1523 0000</span>
+          </p>
+          <p class="chat-with-our-live-agent-cli">
+            <span class="call-us">Chat with our Live Agent :</span>
+            <span class="span"> </span>
+            <span class="click-here">Click here</span>
+          </p>
+        </div>
+        <img class="vector-icon" alt="" src="./public/vector.svg" />
+      </div>
+    </div>
+
+    <script>
+      var vectorIcon1 = document.getElementById("vectorIcon1");
+      if (vectorIcon1) {
+        vectorIcon1.addEventListener("click", function () {
+          var popup = document.getElementById("contactHelpContainer");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
+        });
+      }
+      </script>
+  </body>
+</html>
